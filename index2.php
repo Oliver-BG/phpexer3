@@ -67,17 +67,25 @@
                     echo '<script> console.log("' . $script . '")</script>';
                 }
 
-                function insertToDB(){
+                function insertToClientDB(){
                     $servername = "localhost";
                     $username = "root";
                     $password = "admin";
                     $dbname = "formsdb";
     
                     $conn = new mysqli($servername, $username, $password, $dbname);
-                    
+
                     $fname = $_POST['fname'];
                     $mname = $_POST['mname'];
                     $lname = $_POST['lname'];
+                    $houseno = $_POST['houseno'];
+                    $street = $_POST['street'];
+                    $subdiv = $_POST['subdiv'];
+                    $city = $_POST['city'];
+                    $zipcode = $_POST['zipcode'];
+                    $country = $_POST['country'];
+                    $email = $_POST['emailad'];
+                    $gender = $_POST['gender'];
 
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
@@ -86,12 +94,28 @@
 
                     $month_parse = date_parse(insertData('userbdaymm'))['month'];
 
-                    $birthday = ((string) $month_parse) .'/' . insertData('userbdaydd') . '/' . insertData('userbdayyyyy');
+                    $birthday = ((string) $month_parse) .'-' . insertData('userbdaydd') . '-' . insertData('userbdayyyyy');
 
-                    $conn -> query(
-                        "INSERT INTO Client(first_name, middle_name, last_name, house_no, street, vilalge, city, zip_code, country, email, gender, birthday)".
-                        "VALUES()"
-                    );
+                    $insertQuery = "INSERT INTO Client (first_name, middle_name, last_name, house_no, street, village, city, zip_code, country, email, gender, birthday)".
+                    " VALUES (".
+                        '\'' . $fname. '\','.
+                        '\''. $mname. '\','.
+                        '\''. $lname. '\','.
+                        '\''. $houseno. '\','.
+                        '\''. $street. '\','.
+                        '\''. $subdiv. '\','.
+                        '\''. $city. '\','.
+                        '\''. $zipcode. '\','.
+                        '\''. $country. '\','.
+                        '\''. $email. '\','.
+                        '\''. $gender. '\','.
+                        'STR_TO_DATE('. '\'' . $birthday. '\'' . ", '%m-%d-%Y')".
+                    ");";
+
+                    consoleLog($insertQuery);
+                    $conn -> query($insertQuery);
+                    $conn -> commit();
+                    $conn -> close();
                 }
     
 
@@ -157,6 +181,7 @@
 
                 showDependencies();
                 
+                insertToClientDB();
             ?>
         </div>
     </body>

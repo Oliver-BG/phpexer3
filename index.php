@@ -274,6 +274,7 @@
                     'bdaymm', 'bdaydd', 'bdayyyyy',
                     'hoseuno', 'street', 'subdiv',
                     'city', 'zipcode', 'country',
+                    'emailad',
                     'cbagree'
                 );
 
