@@ -11,9 +11,11 @@
     <title>Register Your Information</title>
 </head>
 <body>
-    <nav> <h1> Registration for Application Development and Emerging Technologies </h1> </nav>
-    <div class = 'sub-navbar'> <h3> Submitted by: GALLARDO, Louis Oliver B. - 202110838 </h3> </div>
-    <hr>
+    <div class = 'main-navbar'>
+        <nav class ='navbar'> <h1> Registration for Application Development and Emerging Technologies</h1> </nav>
+        <div class = 'sub-navbar'> <h3> Submitted by: GALLARDO, Louis Oliver B. - 202110838 </h3> </div>
+        <hr>
+    </div>
     <div class = 'container'>
 
         <!-- START FORMS -->
@@ -157,7 +159,7 @@
 
             function insertDependentsSection($name1, $name2, $name3, $depbdaymm, $depbdaydd, $depbdayyyyy, $i){
                 $tags = 
-                "<h2> DEPENDENT $i </h2>" .
+                "<h2 class = 'dep-title'> DEPENDENT $i </h2>" .
                 "<article class = 'field-container'>".
                     "<div>".
                         "<div class ='sub-div'>".

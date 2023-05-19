@@ -9,6 +9,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: beige;
 }
 
 .dd-country,
@@ -19,7 +20,6 @@ input {
   border-radius: 0.23rem;
   border: solid 1px;
   width: 6rem;
-  background-color: beige;
   padding-left: 5px;
 }
 
@@ -33,10 +33,13 @@ input {
 }
 
 .container {
+  margin-top: 8rem;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: all ease 1.5s;
+  background-color: beige;
 }
 
 .field-container {
@@ -45,6 +48,8 @@ input {
   align-items: center;
   justify-content: flex-start;
   padding: 2rem 2rem 2rem 6rem;
+  opacity: 0;
+  transition: all ease 1.5s;
 }
 
 article > div {
@@ -95,15 +100,21 @@ nav {
 }
 
 .field-title {
+  position: relative;
   font-weight: 1000;
   padding-bottom: 0.25rem;
+  right: 4rem;
+  transition: all ease 1.5s;
 }
 
 .subtitle {
+  position: relative;
   padding-top: 0.25rem;
   font-size: 0.75rem;
   color: brown;
   font-weight: 1000;
+  left: 21rem;
+  transition: all ease 1.5s;
 }
 
 .radio-gender {
@@ -111,7 +122,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: beige;
+  background-color: #c8c9c1;
   padding-top: 5px;
   padding-bottom: 5px;
   border: black 1px solid;
@@ -128,10 +139,10 @@ nav {
 
 h2 {
   position: relative;
-  left: 8rem;
   padding-top: 1rem;
   font-size: 1.25rem;
   color: #816e04;
+  transition: all ease 1.5s;
 }
 
 .agree-container > div {
@@ -171,9 +182,32 @@ h2 {
 }
 
 .sub-navbar {
+  position: relative;
   text-align: center;
   color: white;
   background-color: black;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  left: 30rem;
+  transition: all ease 1.5s;
+  opacity: 0;
+}
+
+.main-navbar {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+.navbar {
+  position: relative;
+  right: 30rem;
+  opacity: 0;
+  transition: all ease 1.5s;
+}
+
+.dep-title {
+  left: 10rem;
+  opacity: 0;
+  transition: all ease 1.5s;
 }

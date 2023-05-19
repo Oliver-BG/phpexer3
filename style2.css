@@ -9,6 +9,11 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: beige;
+}
+
+.container {
+  background-color: beige;
 }
 
 span {
@@ -41,7 +46,7 @@ nav {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -53,13 +58,42 @@ nav {
 }
 
 .title {
+  position: relative;
   font-weight: 1000;
+  left: 31rem;
+  opacity: 0;
+  transition: all ease 1.5s;
+}
+
+.section-title {
+  position: relative;
+  left: 21rem;
+  opacity: 0;
+  transition: all ease 1.5s;
 }
 
 .sub-navbar {
+  position: relative;
   text-align: center;
   color: white;
   background-color: black;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  left: 30rem;
+  opacity: 0;
+  transition: all ease 1.5s;
+}
+
+.navbar {
+  position: relative;
+  right: 30rem;
+  opacity: 0;
+  transition: all ease 1.5s;
+}
+
+.info {
+  position: relative;
+  left: 41rem;
+  opacity: 0;
+  transition: all ease 1.5s;
 }
