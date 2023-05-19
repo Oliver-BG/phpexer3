@@ -75,6 +75,10 @@
     
                     $conn = new mysqli($servername, $username, $password, $dbname);
                     
+                    $fname = $_POST['fname'];
+                    $mname = $_POST['mname'];
+                    $lname = $_POST['lname'];
+
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                         return;
