@@ -21,10 +21,10 @@
                     return $name ;
                 }
 
-                echo '<h2> NAME </h2><hr>';
+                echo '<h2> FULL NAME </h2><hr>';
 
                 echo '<span class = "name">' . insertData('fname') . ' ' .
-                insertData('mname') . ' ' . insertData('lname') . '</span>';
+                insertData('mname') . ' ' . insertData('lname') . ' - '. insertData('gender') . '</span>';
 
                 echo '<hr> <h2> ADDRESS </h2><hr>';
                 
@@ -34,6 +34,10 @@
     
                 for($i = 0; 6>$i;$i++)
                 {
+                    if(empty(insertData($addressArr[$i]))){
+                        continue;
+                    }
+
                     if($i==5)
                     {
                         $addressStr .= insertData($addressArr[$i]);
@@ -46,6 +50,17 @@
 
                 echo '<span class = "address">' . $addressStr . '</span>';
 
+                echo '<hr> <h2> CONTACTS </h2><hr>';
+                echo '<div class="field"><span class = "title"> Contact Number: </span>'. '<span> '.' ' .insertData('contactno') . '</span></div>';
+
+                echo '<div class="field"><span class = "title"> Email Address: </span>'. '<span> '.' ' .insertData('emailad') . '</span></div>' . '<br>';
+
+                echo '<hr> <h2> DATE OF BIRTH </h2><hr>';
+                echo '<div class="field">'. '<span> '.' ' .
+                    insertData('userbdaymm') . ' ' .
+                    insertData('userbdaydd') . ', ' .
+                    insertData('userbdayyyyy') .
+                    '</span></div>' . '<br>';
             ?>
         </div>
     </body>

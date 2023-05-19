@@ -114,7 +114,7 @@
                 "<div>".
                     "<div class ='sub-div'>".
                         "<span class = 'field-title'> Email address </span>".
-                        "<input type = 'email' class = 'field' type = 'text' name = 'emailad' placeholder = 'e.g oliverbgallardo@gmail.com'>".
+                        "<input type = 'email' class = 'field' name = 'emailad' placeholder = 'e.g oliverbgallardo@gmail.com'>".
                         "<span class = 'subtitle'> We won't share this information with anyone </span>".
                     "</div>".  
 
@@ -134,16 +134,16 @@
                 "<div>".
                 
                     "<div class ='sub-div'>".
-                        "<span class = 'field-title'> Email address </span>".
-                        "<input type = 'email' class = 'field' type = 'text' name = 'emailad' placeholder = 'e.g 09617178515'>".
+                        "<span class = 'field-title'> Contact Number </span>".
+                        "<input type = 'text' class = 'field' type = 'text' name = 'contactno' placeholder = 'e.g 09617178515'>".
                     "</div>".
                     
                     "<div class ='sub-div'>".
                         "<span class = 'field-title' id = 'radio-gender'> Gender </span>".
                         "<div class = 'radio-gender'>" .
-                            "<input type=\"radio\" name=\"gender\" value='male'>" .
+                            "<input type=\"radio\" name=\"gender\" value='Male' checked>" .
                             "<label for=\"male\">Male</label>" .
-                            "<input type=\"radio\" name=\"gender\" value='female'>" .
+                            "<input type=\"radio\" name=\"gender\" value='Female'>" .
                             "<label for=\"female\">Female</label>" .
                         "</div>".
                     "</div>" .

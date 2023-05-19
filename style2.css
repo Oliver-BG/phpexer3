@@ -12,17 +12,20 @@ body {
 }
 
 span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 h2 {
+  position: relative;
+  left: 2.5rem;
   padding-top: 1.5rem;
+  font-size: 1.35rem;
+  color: #b66408;
 }
 
-h2,
 span {
   position: relative;
-  left: 2rem;
+  left: 5rem;
 }
 
 h1 {
@@ -41,4 +44,14 @@ nav {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: 1000;
 }
