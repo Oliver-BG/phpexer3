@@ -49,7 +49,7 @@
 
                             $month_parse = date_parse($depbdaymm)['month'];
 
-                            $birthday = ((string) $month_parse) .'/' . $depbdaydd . '/' . $depbdayyyyy;
+                            $birthday = ((string) $month_parse) .'-' . $depbdaydd . '-' . $depbdayyyyy;
                     
                             $zodiac = returnZodiac($month_parse, $depbdaydd);
 
@@ -58,22 +58,60 @@
                                 $depbdaydd . ', ' .
                                 $depbdayyyyy .
                                 ' - ' . $zodiac . '</span></div>' . '<br>';
+                            
+                            insertToDependenciesTable($depfname, $depmname, $deplname, $birthday);
                         }
                     }
 
                 }
 
+                function insertToDependenciesTable($fname, $mname, $lname, $bday){
+                    $conn = new mysqli('localhost', 'root', 'admin', 'formsdb');
+
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                        return;
+                    } 
+
+                    $sql_select_query = "SELECT MAX(id) AS last_id FROM Client;";
+
+                    consoleLog($sql_select_query);
+
+                    $result = mysqli_query($conn, $sql_select_query);
+                    $fk = '';
+
+                    if(mysqli_num_rows($result) > 0)
+                    {
+                        foreach($result as $row)
+                        {
+                            $fk = (int) $row['last_id'];
+                        }
+                    }
+
+                    $sql_insert_query = "INSERT INTO Dependency (".
+                        "first_name, middle_name, last_name, birthday, client_id".
+                        ")".
+                        " VALUES ('".
+                        $fname . '\', \'' .
+                        $mname . '\', \'' .
+                        $lname . '\',' .
+                        'STR_TO_DATE('. '\'' . $bday. '\'' . ", '%m-%d-%Y')".
+                        ", " . $fk . ');';
+
+                    consoleLog($sql_insert_query);
+
+                    $conn -> query($sql_insert_query);
+                    $conn -> commit();
+                    $conn -> close();
+                }
+
                 function consoleLog($script){
                     echo '<script> console.log("' . $script . '")</script>';
                 }
-
+ 
                 function insertToClientDB(){
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "admin";
-                    $dbname = "formsdb";
     
-                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    $conn = new mysqli('localhost', 'root', 'admin', 'formsdb');
 
                     $fname = $_POST['fname'];
                     $mname = $_POST['mname'];
@@ -178,10 +216,10 @@
                     insertData('userbdaydd') . ', ' .
                     insertData('userbdayyyyy') .
                     ' - ' . $zodiac . '</span></div>' . '<br>';
-
-                showDependencies();
                 
                 insertToClientDB();
+
+                showDependencies();
             ?>
         </div>
     </body>

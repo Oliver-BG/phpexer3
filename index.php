@@ -207,26 +207,11 @@
                 echo '<script> console.log("' . $script . '")</script>';
             }
 
-            function insertUserToDB(){
-                $servername = "localhost";
-                $username = "root";
-                $password = "admin";
-                $dbname = "formsdb";
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                $query = "INSERT INTO Client(first_name, middle_name,". "last_name";
-            }
-
             function CreateDataBase()
             {
                 # CONNECT TO MYSQL
-
-                $servername = "localhost";
-                $username = "root";
-                $password = "admin";
-                $dbname = "formsdb";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                $conn = new mysqli('localhost', 'root', 'admin', 'formsdb');
                 
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
