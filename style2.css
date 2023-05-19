@@ -55,3 +55,11 @@ nav {
 .title {
   font-weight: 1000;
 }
+
+.sub-navbar {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}

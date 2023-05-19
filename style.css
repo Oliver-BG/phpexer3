@@ -169,3 +169,11 @@ h2 {
   position: relative;
   text-align: start;
 }
+
+.sub-navbar {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}

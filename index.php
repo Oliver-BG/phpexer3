@@ -11,7 +11,8 @@
     <title>Register Your Information</title>
 </head>
 <body>
-    <nav> <h1> SAMPLE REGISTRATION </h1> </nav>
+    <nav> <h1> Registration for Application Development and Emerging Technologies </h1> </nav>
+    <div class = 'sub-navbar'> <h3> Submitted by: GALLARDO, Louis Oliver B. - 202110838 </h3> </div>
     <hr>
     <div class = 'container'>
 
@@ -198,6 +199,20 @@
                 "</div>";
 
                 return $tags;
+            }
+
+            function consoleLog($script){
+                echo '<script> console.log("' . $script . '")</script>';
+            }
+
+            function insertUserToDB(){
+                $servername = "localhost";
+                $username = "root";
+                $password = "admin";
+                $dbname = "formsdb";
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                $query = "INSERT INTO Client(first_name, middle_name,". "last_name";
             }
 
             function CreateDataBase()
