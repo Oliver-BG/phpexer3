@@ -14,7 +14,7 @@ setTimeout(function () {
   navBar.style.right = "0";
 
   subNavBar.style.opacity = "1";
-  navBar.style.opacity = "1";
+  navBar.style.opacity = "0.75";
 
   titles.forEach((title) => {
     title.style.left = "8rem";

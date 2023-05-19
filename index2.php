@@ -10,9 +10,11 @@
         <link rel="stylesheet" href="style2.css">
     </head>
     <body>
-        <nav class = 'navbar'> <h1> Registration for Application Development and Emerging Technologies </h1> </nav>
-        <div class = 'sub-navbar'> <h3> Submitted by: GALLARDO, Louis Oliver B. - 202110838 </h3> </div>
+        <div class = 'main-navbar'>
+            <nav class = 'navbar'> <h1> Registration for Application Development and Emerging Technologies </h1> </nav>
+            <div class = 'sub-navbar'> <h3> Submitted by: GALLARDO, Louis Oliver B. - 202110838 </h3> </div>
         <hr>
+        </div>
         <div class = 'container'>
             <?php
 
