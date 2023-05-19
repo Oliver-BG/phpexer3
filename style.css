@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dd-country,
+select,
+input {
+  height: 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.23rem;
+  border: solid 1px;
+  width: 6rem;
+  background-color: beige;
+  padding-left: 5px;
+}
+
+.dd-country,
+input {
+  width: 20rem;
+}
+
+.field-dependents {
+  width: 13rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 2rem 2rem 6rem;
+}
+
+.field-container > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .field-container > form {
+    flex-direction: column;
+  }
+}
+
+.sub-div {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+}
+
+nav {
+  background-color: #857b38;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.bday-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.dd-bday-dd,
+.dd-bday-mm,
+.dd-bday-yyyy {
+  background-color: #c8c9c1;
+}
+
+.bday-dd {
+  display: block;
+}
+
+.field-title {
+  font-weight: 1000;
+  padding-bottom: 0.25rem;
+}
+
+.subtitle {
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
+  color: brown;
+  font-weight: 1000;
+}
+
+.radio-gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: beige;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: black 1px solid;
+  border-radius: 0.23rem;
+  padding-right: 5rem;
+  padding-left: 1rem;
+  max-width: 15rem;
+}
+
+#radio-gender {
+  display: inline-block;
+  text-align: center;
+}
+
+h2 {
+  position: relative;
+  left: 8rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+  color: #816e04;
+}
+
+.agree-container > form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+#btn-agree {
+  position: relative;
+  color: green;
+  width: 5rem;
+  height: 2.5rem;
+  transition: all ease 0.5s;
+  left: 6rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+#btn-agree:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: red;
+  background-color: orange;
+}
+
+#cb {
+  position: relative;
+  text-align: end;
+}
+
+.label-agree {
+  position: relative;
+  text-align: start;
+}
