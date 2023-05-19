@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register Your Information</title>
 </head>
 <body>
     <nav> <h1> SAMPLE REGISTRATION </h1> </nav>
@@ -27,7 +27,7 @@
 
                 $tags = 
                 "<article class = 'field-container'>".
-                    "<form action = '' method = \"post\">".
+                    "<div>".
                         "<div class ='sub-div'>".
                            "<span class = 'field-title'> $title1 </span>".
                             "<input class = 'field' type = 'text' name = $name1 placeholder = '$ph1'>".
@@ -43,7 +43,7 @@
                             "<input class = 'field' type = 'text' name = $name3 placeholder = '$ph3'>".
                         "</div>".
 
-                    "</form>".
+                    "</div>".
                 "</article>";
 
                 return $tags;
@@ -79,7 +79,7 @@
 
                 $tags = 
                 "<article class = 'field-container'>".
-                    "<form action = '' method = \"post\">".
+                    "<div>".
                         "<div class ='sub-div'>".
                            "<span class = 'field-title'> $title1 </span>".
                             "<input class = 'field' type = 'text' name = $name1 placeholder = '$ph1'>".
@@ -97,7 +97,7 @@
                             "</select>".
                         "</div>". 
 
-                    "</form>".
+                    "</div>".
                 "</article>";
 
                 return $tags;
@@ -111,7 +111,7 @@
 
                 $tags = 
                 "<article class = 'field-container'>".
-                "<form action = \"\" method = \"post\">".
+                "<div>".
                     "<div class ='sub-div'>".
                         "<span class = 'field-title'> Email address </span>".
                         "<input type = 'email' class = 'field' type = 'text' name = 'emailad' placeholder = 'e.g oliverbgallardo@gmail.com'>".
@@ -122,7 +122,7 @@
 
                         "<span class = 'subtitle'> Please make sure you are over 18 years old </span>".
                     "</div>".
-                "</form>".
+                "</div>".
                 "</article>";
 
                 return $tags;
@@ -131,7 +131,7 @@
             function insertContactandGender(){
                 $tags = 
                 "<article class = 'field-container'>".
-                "<form action = \"\" method = \"post\">".
+                "<div>".
                 
                     "<div class ='sub-div'>".
                         "<span class = 'field-title'> Email address </span>".
@@ -148,7 +148,7 @@
                         "</div>".
                     "</div>" .
 
-                "</form>".
+                "</div>".
                 "</article>";
 
                 return $tags;
@@ -158,7 +158,7 @@
                 $tags = 
                 "<h2> DEPENDENT $i </h2>" .
                 "<article class = 'field-container'>".
-                    "<form action = '' method = \"post\">".
+                    "<div>".
                         "<div class ='sub-div'>".
                            "<span class = 'field-title'> Given Name </span>".
                             "<input class = 'field-dependents' type = 'text' name = $name1 placeholder = 'e.g Louis Oliver'>".
@@ -178,7 +178,7 @@
 
                     "</div>".
 
-                    "</form>".
+                    "</div>".
                 "</article>";
 
                 return $tags;
@@ -188,13 +188,13 @@
             function insertAgreeSection(){
                 $tags = 
                 "<div class = 'agree-container'>".
-                    "<form method=\"post\" action=\"./index2.php\">".
+                    "<div>".
                         "<div>".         
                             "<input id = 'cb' type=\"checkbox\" name=\"cbagree\" value=\"agree\">".
                                 
                             "<label class ='label-agree'>I agree all the following information is correct.</label></div>".
                         "<input id = 'btn-agree' type=\"submit\" name=\"agree\" value=\"Submit\">".   
-                    "</form>".
+                    "<div>".
                 "</div>";
 
                 return $tags;
@@ -271,6 +271,9 @@
                 
             }
 
+            //FORMS
+            echo '<form method = "POST" action = "./index2.php">';
+
             # First Name, Middle Name, Surname
             echo insertFormSection('First Name', 'Middle Name', 'Last Name', 'e.g Louis Oliver','e.g Bronto','e.g Gallardo', 'fname','mname','lname');
             
@@ -304,6 +307,8 @@
             }
 
             echo insertAgreeSection();
+
+            echo '</form>';
 
             CreateDataBase();
     

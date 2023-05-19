@@ -47,15 +47,16 @@ input {
   padding: 2rem 2rem 2rem 6rem;
 }
 
-.field-container > form {
+article > div {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .field-container > form {
+  article > div {
     flex-direction: column;
   }
 }
@@ -133,7 +134,7 @@ h2 {
   color: #816e04;
 }
 
-.agree-container > form {
+.agree-container > div {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
