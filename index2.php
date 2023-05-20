@@ -15,6 +15,9 @@
             <div class = 'sub-navbar'> <h3> Submitted by: GALLARDO, Louis Oliver B. - 202110838 </h3> </div>
         <hr>
         </div>
+        <div class = 'success-container'>
+            <h2 class = 'success-msg'> You have been registered SUCCESSFULLY! </h2>
+        </div>
         <div class = 'container'>
             <?php
 

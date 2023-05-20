@@ -91,6 +91,12 @@ nav {
   transition: all ease 1.5s;
 }
 
+@media screen and (max-width: 800px) {
+  .sub-navbar {
+    font-size: 0.85rem;
+  }
+}
+
 .navbar {
   position: relative;
   right: 30rem;
@@ -103,4 +109,32 @@ nav {
   left: 41rem;
   opacity: 0;
   transition: all ease 1.5s;
+}
+
+.success-container {
+  position: relative;
+  top: 8rem;
+  background-color: white;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .success-container {
+    padding-top: 1rem;
+    top: 9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .success-container {
+    padding-top: 1rem;
+    top: 10rem;
+  }
+}
+
+.success-msg {
+  left: 20rem;
+  color: green;
+  transition: all ease 1.5s;
+  opacity: 0;
 }
